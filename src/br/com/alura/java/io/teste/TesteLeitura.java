@@ -15,9 +15,13 @@ public class TesteLeitura {
 		InputStreamReader isr = new InputStreamReader(fis); //bits/bytes em char
 		BufferedReader br = new BufferedReader(isr); //
 		
-		String linha = br.readLine(); //
+		String linha = br.readLine(); 
 		
-		System.out.println(linha);
+		while ( linha != null) {
+			System.out.println(linha);
+			linha = br.readLine();
+		}
+		
 		
 		br.close();
 	}
