@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 
-public class TesteEscrita3 {
+public class TesteEscritaPrintStream {
 	public static void main(String[] args) throws IOException {
 		
 		//Fluxo de Escrita de arquivo
