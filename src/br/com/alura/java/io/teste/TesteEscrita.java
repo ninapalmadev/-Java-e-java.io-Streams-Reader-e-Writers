@@ -1,31 +1,27 @@
 package br.com.alura.java.io.teste;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
 
 public class TesteEscrita {
 	public static void main(String[] args) throws IOException {
 		
-		//Fluxo de Entrada com arquivo
+		//Fluxo de Escrita de arquivo
 		
-		InputStream fis = new FileInputStream("lorem.txt"); //entrada
-		Reader isr = new InputStreamReader(fis); //bits/bytes em char
-		BufferedReader br = new BufferedReader(isr); //saída
+		OutputStream fos = new FileOutputStream("lorem2.txt"); //entrada
+		Writer osw = new OutputStreamWriter(fos); //bits/bytes em char
+		BufferedWriter bw = new BufferedWriter(osw); //saída
 		
-		String linha = br.readLine(); 
+		bw.write("Mussum Ipsum, cacilds vidis litro abertis. Praesent vel viverra nisi");
+		bw.newLine();
+		bw.newLine();
+		bw.write("Mauris aliquet nunc non turpis scelerisque, eget.");
 		
-		while ( linha != null) {
-			System.out.println(linha);
-			linha = br.readLine();
-		}
-		
-		
-		br.close();
+		bw.close();
 	}
 
 }
