@@ -8,7 +8,7 @@ public class TesteLeitura2 {
 
 	public static void main(String[] args) throws Exception {
 		
-		Scanner scanner = new Scanner(new File("contas.csv"));
+		Scanner scanner = new Scanner(new File("contas (1).csv"), "UTF-8");
 		
 		while(scanner.hasNextLine()) {
 			String linha = scanner.nextLine();
@@ -24,7 +24,7 @@ public class TesteLeitura2 {
 			String titular = linhaScanner.next();
 			double saldo = linhaScanner.nextDouble();
 			
-			String formatado = String.format(Locale.US, "Conta: %s - %04d-%04d, Titular: %s: Saldo: R$ %08.2f", 
+			String formatado = String.format(Locale.US, "Conta: %s - %04d-%04d, Titular: %s: %08.2f", 
 												conta, agencia, numero, titular, saldo);
 			
 			System.out.println(formatado);
